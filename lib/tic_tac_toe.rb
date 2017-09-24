@@ -94,11 +94,8 @@ end
   end
 
   def winner
-    token = won?
-    if token
+    if token = won?
       @board[token[0]]
-    else
-      nil
     end
   end
 
