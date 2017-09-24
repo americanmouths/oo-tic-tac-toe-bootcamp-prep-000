@@ -92,5 +92,13 @@ end
     end
   end
 
+  def winner
+    token = won?
+    if token
+      @board[token[0]]
+    else
+      nil
+    end
+  end
 
 end
