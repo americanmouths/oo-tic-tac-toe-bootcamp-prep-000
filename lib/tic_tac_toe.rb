@@ -70,6 +70,15 @@ end
   end
 end
 
+def full?
+  @board.all? do |taken|
+    if taken == "X" || taken == "O"
+      true
+    else
+      false
+    end
+  end
+end
 
 
 end
