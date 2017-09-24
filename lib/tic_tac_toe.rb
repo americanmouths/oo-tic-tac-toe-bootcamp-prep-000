@@ -84,4 +84,13 @@ end
     full? && !won?
   end
 
+  def over?
+    if full? || won? || draw?
+      true
+    else
+      false
+    end
+  end
+
+
 end
