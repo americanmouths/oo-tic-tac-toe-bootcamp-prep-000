@@ -42,6 +42,18 @@ class TicTacToe
     end
   end
 
+  def turn
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(index)
+    move(index, player_token(board))
+    display_board
+  else
+    turn
+  end
+end
+
   def current_player
   turn_count % 2 == 0 ? "X" : "O"
   end
